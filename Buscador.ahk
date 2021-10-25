@@ -4,48 +4,61 @@ Sapi.Volume :=85
 soundBeep, 440, 250
 sleep, 100
 Sapi.Speak("Bienvenido al buscador automatizado. Pulsa control + shift + q para cerrar el programa, o control + shift  + h para leer la ayuda del mismo. ¡Qué lo disfrutes!")
-^f2::
 sleep, 5000
-return
 ^+h::
 run readme.txt
 return
+
 ^+q::
 Sapi.Speak("Hasta luego!")
 sleep, 50
 SoundBeep, 1000, 200
 exitapp
-
-sleep, 3000
 return
+
 f4::
 InputBox, texto, Texto de búsqueda, Ingrese el texto de búsqueda en google
 Run https://www.google.com/search?q=%texto%
-
 Return
+
 f3::
 InputBox, texto2, Texto de búsqueda, Ingrese el texto para buscar en youtube.
 run https://www.youtube.com/results?search_query=%texto2%
-
 return
-f2::
+
+F2::
 InputBox, texto2, Texto de búsqueda, Ingrese la búsqueda de pornhub.
 run https://www.google.com
 sleep, 3000
-ClipPut(https://es.pornhub.com/video/search?search=%texto2%)
+Clipboard := "https://es.pornhub.com/video/search?search="
 send, ^+n
-send, 500
+sleep, 500
 send, !d
 sleep, 400
 send, ^v
-sleep, 50
-send, enter
+Clipboard := texto2
+sleep, 400
+send, ^v
+sleep, 300
+send, {enter}
 return
 f1::
 InputBox, texto3, Texto de búsqueda, Ingresa el término a buscar en xnxx.com
-run https://www.xnxx.com/search/%texto3%
-
+run https://www.google.com
+sleep, 3000
+Clipboard := "https://www.xnxx.com/search/"
+send, ^+n
+sleep, 500
+send, !d
+sleep, 400
+send, ^v
+Clipboard := texto3
+sleep, 400
+send, ^v
+sleep, 300
+send, {enter}
 return
+
 f5::
 InputBox, texto4, Texto de búsqueda, Ingresa la búsqueda para mercado libre México.
 run https://listado.mercadolibre.com.mx/%TEXTO4%#D[A:%texto%]
