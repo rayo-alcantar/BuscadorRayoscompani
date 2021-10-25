@@ -50,10 +50,14 @@ Búsqueda en spotify (necesitas tener sesión abierta en el navegador).
 windows + n:
 Búsqueda en netflix (necesitas tener sesión abierta en el navegador).
 
-Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a:
-rayoalcantar@gmail.com
+Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a: rayoalcantar@gmail.com
+
+changges:
+Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en edge.
+Se añaideron los sitios web de netflix y spotify.
+
 Twitter: @rayoalcantar
-Version: 1.01
+Version: 1.2
 Autor: rayoscompani.
 Mail: rayoalcantar@gmail.com
 Sitio web: www.rayoscompani.260mb.net
