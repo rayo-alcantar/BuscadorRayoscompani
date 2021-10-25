@@ -53,6 +53,7 @@ Búsqueda en netflix (necesitas tener sesión abierta en el navegador).
 Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a: rayoalcantar@gmail.com
 
 changges:
+Se añadió el sitio web de NVDA.es
 Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en edge.
 Se añaideron los sitios web de netflix y spotify.
 
