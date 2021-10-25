@@ -100,3 +100,7 @@ return
 InputBox, texto13, Ingresar búsqueda, Ingresar búsqueda para netflix.
 run https://www.netflix.com/search?q=%texto13%
 return
+^f3::
+InputBox, texto14, Ingresar búsqueda, Ingresa la búsqueda para NVDA.es.
+run https://nvda.es/?s=%texto14%
+return
