@@ -13,7 +13,7 @@ Menu, MenuName, Add, google.com, google
 Menu, MenuName, Add, mercado libre méxico, mlmx
 Menu, MenuName, Add, Amazon méxico, amazonmx
 Menu, MenuName, Add, Amazon España, amazones
-Menu, Menuname, add, amazon.com, amazon.com
+Menu, Menuname, add, amazon.com, amazoncom
 Menu, menuname, Add, Mercado Libre Argentina, mlarg
 Menu, menuname, add, Facebok, facebook
 menu, menuname, add, twitter, twitter
@@ -47,8 +47,8 @@ amazonmx()
 
 amazones:
 amazones()
-amazon.com:
-amazon.com()
+amazoncom:
+amazoncom()
 
 mlarg:
 mlarg()
@@ -100,7 +100,7 @@ amazonmx()
 f7::
 amazones()
 f8::
-amazon.com()
+amazoncom()
 
 f9::
 mlarg()
@@ -184,7 +184,7 @@ run https://www.amazon.es/s?k=%texto6%&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%9
 return
 }
 
-amazon.com(){
+amazoncom(){
 InputBox, texto7, Texto de búsqueda, Ingresa la búsqueda para amazon.com
 run https://www.amazon.com/s?k=%texto7%&ref=nb_sb_noss_2
 return
