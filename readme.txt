@@ -56,13 +56,14 @@ Búsqueda en netflix (necesitas tener sesión abierta en el navegador).
 Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a: rayoalcantar@gmail.com
 
 changges:
+Se optimizó el código, gracias A Gera.
 Se añadió un menú para elegir el lugar de la búsqueda.
 Se añadió el sitio web de NVDA.es
 Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en edge.
 Se añaideron los sitios web de netflix y spotify.
 
 Twitter: @rayoalcantar
-Version: 1.3
+Version: 1.4
 Autor: rayoscompani.
 Mail: rayoalcantar@gmail.com
 Sitio web: www.rayoscompani.260mb.net

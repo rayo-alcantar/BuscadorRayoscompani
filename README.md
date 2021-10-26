@@ -42,6 +42,7 @@ Rayoscompani no se hace responsable de los daños que pueda tener o como pueda r
 Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a: rayoalcantar@gmail.com
 
 ### changes:
+* Se optimizó el código, gracias A Gera.
 * Se añadió un menú para elegir el lugar de la búsqueda.
 * Se añadió el sitio web de NVDA.es
 * Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en Edge.
@@ -51,7 +52,7 @@ Por el momento estos son los sitios web que tenemos disponibles, pero si quieres
 
 Twitter: [@rayoalcantar](https://twitter.com/rayoalcantar)
 
-Versión: 1.3
+Versión: 1.4
 
 Autor: rayoscompani.
 
