@@ -2,7 +2,7 @@
 ¡Hola! Se bienvenido a este, el documento de ayuda del buscador automatizado.
 En el trataré explicar cómo funciona, que hace y para que podría servir.
 Antes de comenzar, me gustaría dar las gracias a Gerardo Kessler, pues, el código del  buscador original es suyo, así también el manual de este poderoso lenguaje.
-[Visita su página web] (https://reaperyotrasyerbas.com/index.php)
+[Visita su página web](https://reaperyotrasyerbas.com/index.php)
 Tiene muchas cosas interesantes.
 
 ## Explicación del programa.
@@ -50,7 +50,12 @@ Por el momento estos son los sitios web que tenemos disponibles, pero si quieres
 ## Información y contacto
 
 Twitter: [@rayoalcantar](https://twitter.com/rayoalcantar)
-Version: 1.3
+
+Versión: 1.3
+
 Autor: rayoscompani.
+
 Mail: [rayoalcantar@gmail.com](MailTo:rayoalcantar@gmail.com)
-[Sitio web](www.rayoscompani.260mb.net)
+
+[Sitio web](http://rayoscompani.260mb.net/)
+
