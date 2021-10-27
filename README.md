@@ -1,47 +1,40 @@
 # Manual buscador
-¡Hola! Se bienvenido a este, el documento de ayuda del buscador automatizado.
-En el trataré explicar cómo funciona, que hace y para que podría servir.
-Antes de comenzar, me gustaría dar las gracias a Gerardo Kessler, pues, el código del  buscador original es suyo, así también el manual de este poderoso lenguaje.
-[Visita su página web] (https://reaperyotrasyerbas.com/index.php)
-Tiene muchas cosas interesantes.
+¡Hola! Sé bienvenido a este, el documento de ayuda del buscador automatizado.
+En este readme,  trataré de explicar como funciona, que hace y para que podría servir.
+Antes de comenzar, me gustaría dar las gracias a Gerardo Késsler, pues, el código del  buscador original es suyo, así también el manual de este poderoso lenguaje.
+Su sitio web es: https://reaperyotrasyerbas.com/index.php
+Tiene muchas cosas interesantes, sugiero verlo! 
 
 ## Explicación del programa.
+Con este programa se pueden facilitar las búsquedas en diferentes sitios webs utilizados por la gran mayoría de la gente en la era digital. 
+Esto sirve para buscar en dominios web usados por todo el mundo sin abrir previamente el navegador y con simples comandos. 
+###Explicación técnica:
+Al ejecutar, sapi nos dará una bienvenida al programa, para luego comprobar si es que hay actualisaciones.
+Se han eliminado los atajos de teclado, para que no haya interferencias con el uso del día a día.
+Ahora,  con el menú podrá elegir el sitio de la búsqueda.
+Como dato, si pulsa la letra con la que comienza la web en la que quiera buscar, irá directamente a ella.
+Ejemplo:
+xnxx.com  x.
+Al pulsar la x, me llevará a dicho cuadro de búsqueda.
 
-Bueno, esto es fácil. Con este programa busco facilitar las búsquedas en diferentes sitios webs utilizados por la gran mayoría de la gente en la era digital.
-
-## Explicación técnica:
-
-El programa recién es ejecutado, nos dará la bienvenida con una voz sapi, indicándonos los atajos principales, que son salir del programa, y abrir este documento.
-Luego, quedará corriendo en segundo plano; esperando un atajo de teclado, para luego desplegar la caja de texto. Donde irá nuestra búsqueda. Al dar ENTER, se abrirá nuestro navegador predeterminado, con la web en cuestión, la búsqueda y resultados, si los hay.
-
-## Advertencia:
+# Advertencia:
 Algunos sitios webs contienen contenido para adultos, úsese bajo su propia responsabilidad y criterio.
 Rayoscompani no se hace responsable de los daños que pueda tener o como pueda repercutir en usted.
 
-# Atajos de teclado:
-* control + ALT + m: abre el menú.
+## manejo del programa.
+* control + alt + m:
+abre el menú.
 
-* Control + shift +h: Abre este documento.
-* Control + shift + q: Cierra el programa.
-* f1: Búsqueda en xnxx.com
-* f2: Búsqueda en pornhub.com.
-* f3: Búsqueda en yotube.com.
-* f4: Búsqueda en google.com.
-* f5: Búsqueda en mercado libre México.
+* Control + shift +h:
+Abre este documento.
 
-* f6: Búsqueda en Amazon México.
-* f7: Búsqueda en Amazon España.
-* f8: Búsqueda para amazon.com.
-* f9: Búsqueda para mercado libre Argentina.
-* f10: Búsqueda para Facebook (necesitas tener sesión abierta en el navegador).
-* f11: Búsqueda para Twitter (necesitas tener sesión abierta en el navegador).
-* Control + Windows + f1: Búsqueda en Bing.
-* control + Windows + s: Búsqueda en Spotify (necesitas tener sesión abierta en el navegador).
-* Windows + n: Búsqueda en Netflix (necesitas tener sesión abierta en el navegador).
+* Control + shift + q:
+Cierra el programa.
 
-Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a: rayoalcantar@gmail.com
 
-### changes:
+### changges:
+* Tenemos actualizador, gracias a Gera Késsler.
+* Se optimizó el código, gracias A Gera, esto incluye la eliminación de comandos, ahora todo será con el submenú.
 * Se añadió un menú para elegir el lugar de la búsqueda.
 * Se añadió el sitio web de NVDA.es
 * Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en Edge.
@@ -50,7 +43,12 @@ Por el momento estos son los sitios web que tenemos disponibles, pero si quieres
 ## Información y contacto
 
 Twitter: [@rayoalcantar](https://twitter.com/rayoalcantar)
-Version: 1.3
+
+Versión: 1.5
+
 Autor: rayoscompani.
+
 Mail: [rayoalcantar@gmail.com](MailTo:rayoalcantar@gmail.com)
-[Sitio web](www.rayoscompani.260mb.net)
+
+[Sitio web](http://rayoscompani.260mb.net/)
+

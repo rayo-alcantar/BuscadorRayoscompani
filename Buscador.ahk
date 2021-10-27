@@ -1,4 +1,4 @@
-﻿#include include\sapi.ahk
+#include include\sapi.ahk
 sprate("4")
 spvolume("85")
 soundBeep, 440, 250
