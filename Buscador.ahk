@@ -22,9 +22,10 @@ Menu, cat4, Add, Amazon méxico, buscar
 Menu, cat4, Add, Mercado Libre Argentina, buscar
 Menu, cat4, Add, Mercado libre méxico, buscar
 Menu, cat5, add, Facebook, buscar
-menu, cat5, add, GitHub, buscar
 menu, cat5, add, Twitter, buscar
 menu, cat6, add, NVDA En español, buscar
+menu, cat6, add, GitHub, buscar
+
 ;Creamos las categorías:
 Menu, menuname, Add, Porno, :cat1
 Menu, menuname, Add, Multimedia, :cat2
@@ -58,9 +59,9 @@ sitios3 := ["https://www.bing.com/search?q=" cadena "%&form=QBLH&sp=-1&pq=ho&sc=
 ;Tiendas
 sitios4 := ["https://www.amazon.com/s?k=" cadena "&ref=nb_sb_noss_2", "https://www.amazon.es/s?k=" cadena "%&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2", "https://www.amazon.com.mx/s?k=" cadena "&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2", "https://listado.mercadolibre.com.ar/" cadena "#D[A:%texto8%]", "https://listado.mercadolibre.com.mx/" cadena "#D[A:%texto%]"]
 ;Redes
-sitios5 := ["https://www.facebook.com/search/top?q=%C3%" cadena, "https://github.com/search?q=" cadena, "https://twitter.com/search?q=" cadena "&src=typed_query"]
+sitios5 := ["https://www.facebook.com/search/top?q=%C3%" cadena, "https://twitter.com/search?q=" cadena "&src=typed_query"]
 ;Misc
-sitios6 := ["https://nvda.es/?s=" cadena]
+sitios6 := ["https://nvda.es/?s=" cadena, "https://github.com/search?q=" cadena]
 ;Lo siguiente es comprobar cada submenú para ir obteniendo la posición y selección correcta al momento de ejecutar la página.
 if A_ThisMenu = cat1
 {
