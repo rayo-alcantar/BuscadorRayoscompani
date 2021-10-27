@@ -1,237 +1,122 @@
-﻿Sapi := ComObjCreate("SAPI.SpVoice")
-Sapi := ComObjCreate("SAPI.SpVoice")
-Sapi.Rate := 4
-Sapi.Volume :=85
+﻿#include include\sapi.ahk
+sprate("4")
+spvolume("85")
 soundBeep, 440, 250
 sleep, 100
-Sapi.Speak("Bienvenido al buscador automatizado. Pulsa control + alt + m para abrir el menú, control + shift + q para cerrar el programa, o control + shift  + h para leer la ayuda del mismo. ¡Qué lo disfrutes!")
+speak("Bienvenido al buscador automatizado. Pulsa control + alt + m para abrir el menú, control + shift + q para cerrar el programa, o control + shift  + h para leer la ayuda del mismo. ¡Que lo disfrutes!", 1)
 
-
-Menu, MenuName, add, xnxx.com, xnxx
-Menu, MenuName, Add, pornhub.com, pornhub
-Menu, MenuName, Add, youtube.com, youtube
-Menu, MenuName, Add, google.com, google
-Menu, MenuName, Add, mercado libre méxico, mlmx
-Menu, MenuName, Add, Amazon méxico, amazonmx
-Menu, MenuName, Add, Amazon España, amazones
-Menu, Menuname, add, amazon.com, amazon.com
-Menu, menuname, Add, Mercado Libre Argentina, mlarg
-Menu, menuname, add, Facebok, facebook
-menu, menuname, add, twitter, twitter
-menu, menuname, add, Bing, bing
-menu, menuname, add, Spotify, spotify
-menu, menuname, add, Netflix, netflix
-menu, menuname, add, NVDA En español, nvda
+version = V1.4
+SetTimer, actualizar, 10800000
+;organización de páginas por categoría.
+Menu, cat1, Add, Pornhub.com, buscar
+Menu, Cat1, add, xnxx.com, buscar
+menu, cat2, add, Netflix, buscar
+menu, cat2, add, SoundCloud, buscar
+menu, cat2, add, Spotify, buscar
+Menu, cat2, Add, Youtube.com, buscar
+menu, cat3, add, Bing, buscar
+Menu, cat3, Add, Google.com, buscar
+Menu, cat4, add, Amazon.com, buscar
+Menu, cat4, Add, Amazon España, buscar
+Menu, cat4, Add, Amazon méxico, buscar
+Menu, cat4, Add, Mercado Libre Argentina, buscar
+Menu, cat4, Add, Mercado libre méxico, buscar
+Menu, cat5, add, Facebook, buscar
+menu, cat5, add, GitHub, buscar
+menu, cat5, add, Twitter, buscar
+menu, cat6, add, NVDA En español, buscar
+;Creamos las categorías:
+Menu, menuname, Add, Plataformas, :cat1
+Menu, menuname, Add, Multimedia, :cat2
+Menu, menuname, Add, Motores de búsqueda, :cat3
+Menu, menuname, Add, Tienda, :cat4
+Menu, menuname, Add, Redes sociales, :cat5
+Menu, menuname, Add, Miscelánea, :cat6
 menu, menuname, add, Cerrar, cerrar
 
-^!m::
-Menu, MenuName, Show
+sleep 9000
+gosub actualizar
+
+^!m::Menu, MenuName, Show
+
+buscar(ItemName, ItemPos, MenuName) {
+sleep 150
+InputBox, cadena, Texto de búsqueda, Ingresa el término a buscar en %ItemName%
+;Agrega mensaje de error en campo en blanco.
+if (cadena) = ""
+{
+MsgBox, 16, Error, Por favor introduce un criterio de búsqueda.
 return
-
-xnxx:
-InputBox, texto3, Texto de búsqueda, Ingresa el término a buscar en xnxx.com
-
-run https://www.google.com
-sleep, 3000
-Clipboard := "https://www.xnxx.com/search/"
-send, ^+n
-sleep, 500
-send, !d
-sleep, 400
-send, ^v
-Clipboard := texto3
-sleep, 400
-send, ^v
-sleep, 300
-send, {enter}
-return
-
-pornhub:
-InputBox, texto2, Texto de búsqueda, Ingrese la búsqueda de pornhub.
-run https://www.google.com
-sleep, 3000
-Clipboard := "https://es.pornhub.com/video/search?search="
-send, ^+n
-sleep, 500
-send, !d
-sleep, 400
-send, ^v
-Clipboard := texto2
-sleep, 400
-send, ^v
-sleep, 300
-send, {enter}
-return
-
-youtube:
-InputBox, texto2, Texto de búsqueda, Ingrese el texto para buscar en youtube.
-run https://www.youtube.com/results?search_query=%texto2%
-return
-
-google:
-InputBox, texto, Texto de búsqueda, Ingrese el texto de búsqueda en google
-Run https://www.google.com/search?q=%texto%
-Return
-
-mlmx:
-InputBox, texto4, Texto de búsqueda, Ingresa la búsqueda para mercado libre México.
-run https://listado.mercadolibre.com.mx/%TEXTO4%#D[A:%texto%]
-return
-
-amazonmx:
-InputBox, texto5, Texto de búsqueda, Ingrese el término de búsqueda para amazon México.
-run https://www.amazon.com.mx/s?k=%texto5%&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2
-return
-
-amazones:
-InputBox, texto6, Texto de búsqueda, Ingrese el texto de búsqueda para amazon España.
-run https://www.amazon.es/s?k=%texto6%&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2
-return
-
-amazon.com:
-InputBox, texto7, Texto de búsqueda, Ingresa la búsqueda para amazon.com
-run https://www.amazon.com/s?k=%texto7%&ref=nb_sb_noss_2
-return
-
-mlarg:
-InputBox, texto8, Ingresar búsqueda, ingresar la búsqueda de mercado libre argentina.
-run https://listado.mercadolibre.com.ar/%texto8%#D[A:%texto8%]
-return
-
-facebook:
-InputBox, texto9, Ingresar búsqueda, Ingresar la búsqueda de facebook.
-run https://www.facebook.com/search/top?q=%C3%%texto9%
-return
-
-twitter:
-InputBox, texto10, Ingresar búsqueda, Ingresa la búsqueda para twitter.
-run https://twitter.com/search?q=%texto10%&src=typed_query
-return
-
-bing:
-InputBox, texto11, Ingresar búsqueda, Ingresa la búsqueda para bing.
-run https://www.bing.com/search?q=%texto11%&form=QBLH&sp=-1&pq=ho&sc=9-2&qs=n&sk=&cvid=9F7BDB2914EA4C7988124D49233601D0
-return
-
-spotify:
-InputBox texto12, Ingresa búsqueda, Ingresa búsqueda para spotify
-run https://open.spotify.com/search/%texto12%
-return
-
-netflix:
-InputBox, texto13, Ingresar búsqueda, Ingresar búsqueda para netflix.
-run https://www.netflix.com/search?q=%texto13%
-return
-nvda:
-InputBox, texto14, Ingresar búsqueda, Ingresa la búsqueda para NVDA.es.
-run https://nvda.es/?s=%texto14%
-return
-
-cerrar:
-Sapi.Speak("Hasta luego!")
-sleep, 50
-SoundBeep, 1000, 200
-exitapp
-return
-
-sleep, 5000
+}
+;Lo siguiente sigue siendo cambios referentes a la organización, cada array tiene su categoría y en ella están los enlaces organizados.
+;plataformas
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate"]
+;multimedia
+sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
+;Motores búsqueda
+sitios3 := ["https://www.bing.com/search?q=" cadena "%&form=QBLH&sp=-1&pq=ho&sc=9-2&qs=n&sk=&cvid=9F7BDB2914EA4C7988124D49233601D0", "https://www.google.com/search?q=" cadena]
+;Tiendas
+sitios4 := ["https://www.amazon.com/s?k=" cadena "&ref=nb_sb_noss_2", "https://www.amazon.es/s?k=" cadena "%&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2", "https://www.amazon.com.mx/s?k=" cadena "&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2", "https://listado.mercadolibre.com.ar/" cadena "#D[A:%texto8%]", "https://listado.mercadolibre.com.mx/" cadena "#D[A:%texto%]"]
+;Redes
+sitios5 := ["https://www.facebook.com/search/top?q=%C3%" cadena, "https://github.com/search?q=" cadena, "https://twitter.com/search?q=" cadena "&src=typed_query"]
+;Misc
+sitios6 := ["https://nvda.es/?s=" cadena]
+;Lo siguiente es comprobar cada submenú para ir obteniendo la posición y selección correcta al momento de ejecutar la página.
+if A_ThisMenu = cat1
+{
+run, % sitios1[ItemPos]
+}
+if A_ThisMenu = cat2
+{
+run, % sitios2[ItemPos]
+}
+if A_ThisMenu = cat3
+{
+run, % sitios3[ItemPos]
+}
+if A_ThisMenu = cat4
+{
+run, % sitios4[ItemPos]
+}
+if A_ThisMenu = cat5
+{
+run, % sitios5[ItemPos]
+}
+if A_ThisMenu = cat6
+{
+run, % sitios6[ItemPos]
+}
+}
 
 ^+h::
 run readme.txt
 return
 
 ^+q::
-Sapi.Speak("Hasta luego!")
+cerrar:
+speak("Hasta luego!")
 sleep, 50
 SoundBeep, 1000, 200
-exitapp
+ExitApp
+
+actualizar:
+actualizador(version)
 return
 
-f4::
-InputBox, texto, Texto de búsqueda, Ingrese el texto de búsqueda en google
-Run https://www.google.com/search?q=%texto%
-Return
-
-f3::
-InputBox, texto2, Texto de búsqueda, Ingrese el texto para buscar en youtube.
-run https://www.youtube.com/results?search_query=%texto2%
-return
-
-F2::
-InputBox, texto2, Texto de búsqueda, Ingrese la búsqueda de pornhub.
-run https://www.google.com
-sleep, 3000
-Clipboard := "https://es.pornhub.com/video/search?search="
-send, ^+n
-sleep, 500
-send, !d
-sleep, 400
-send, ^v
-Clipboard := texto2
-sleep, 400
-send, ^v
-sleep, 300
-send, {enter}
-return
-f1::
-InputBox, texto3, Texto de búsqueda, Ingresa el término a buscar en xnxx.com
-run https://www.google.com
-sleep, 3000
-Clipboard := "https://www.xnxx.com/search/"
-send, ^+n
-sleep, 500
-send, !d
-sleep, 400
-send, ^v
-Clipboard := texto3
-sleep, 400
-send, ^v
-sleep, 300
-send, {enter}
-return
-
-f5::
-InputBox, texto4, Texto de búsqueda, Ingresa la búsqueda para mercado libre México.
-run https://listado.mercadolibre.com.mx/%TEXTO4%#D[A:%texto%]
-return
-f6::
-InputBox, texto5, Texto de búsqueda, Ingrese el término de búsqueda para amazon México.
-run https://www.amazon.com.mx/s?k=%texto5%&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2
-return
-f7::
-InputBox, texto6, Texto de búsqueda, Ingrese el texto de búsqueda para amazon España.
-run https://www.amazon.es/s?k=%texto6%&__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2
-return
-f8::
-InputBox, texto7, Texto de búsqueda, Ingresa la búsqueda para amazon.com
-run https://www.amazon.com/s?k=%texto7%&ref=nb_sb_noss_2
-return
-f9::
-InputBox, texto8, Ingresar búsqueda, ingresar la búsqueda de mercado libre argentina.
-run https://listado.mercadolibre.com.ar/%texto8%#D[A:%texto8%]
-return
-
-f10::
-InputBox, texto9, Ingresar búsqueda, Ingresar la búsqueda de facebook.
-run https://www.facebook.com/search/top?q=%C3%%texto9%
-return
-f11::
-InputBox, texto10, Ingresar búsqueda, Ingresa la búsqueda para twitter.
-run https://twitter.com/search?q=%texto10%&src=typed_query
-return
-#^f1::
-InputBox, texto11, Ingresar búsqueda, Ingresa la búsqueda para bing.
-run https://www.bing.com/search?q=%texto11%&form=QBLH&sp=-1&pq=ho&sc=9-2&qs=n&sk=&cvid=9F7BDB2914EA4C7988124D49233601D0
-return
-^#s::
-InputBox texto12, Ingresa búsqueda, Ingresa búsqueda para spotify
-run https://open.spotify.com/search/%texto12%
-return
-#n::
-InputBox, texto13, Ingresar búsqueda, Ingresar búsqueda para netflix.
-run https://www.netflix.com/search?q=%texto13%
-return
-^f3::
-InputBox, texto14, Ingresar búsqueda, Ingresa la búsqueda para NVDA.es.
-run https://nvda.es/?s=%texto14%
-return
+actualizador(versionActual) {
+Web := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+Web.Open("GET", "https://api.github.com/repos/rayo-alcantar/BuscadorRayoscompani/releases", true)
+Web.Send()
+Web.WaitForResponse()
+Data := Web.ResponseText
+RegExMatch(Data, "V\d\.\d", version)
+if (versionActual != version)
+MsgBox, 4, ¡Atención!,
+(
+¡Hay una nueva versión del script!; %version%.
+ ¿Quieres descargarla ahora?
+	)
+	IfMsgBox yes
+	RegExMatch(Data, "https...github.com.rayo.alcantar.BuscadorRayoscompani.releases.download.version.tag.Buscador.automatizado.by.rayoscompaniV\d\.\d.zip", link)
+run %link%
+}
