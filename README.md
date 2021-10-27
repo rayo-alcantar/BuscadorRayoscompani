@@ -37,15 +37,6 @@ Cierra el programa.
 * Se optimizó el código, gracias A Gera, esto incluye la eliminación de comandos, ahora todo será con el submenú.
 * Se añadió un menú para elegir el lugar de la búsqueda.
 * Se añadió el sitio web de NVDA.es
-* Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en edge.
-* Se añaideron los sitios web de netflix y spotify.
-
-Twitter: https://www.twitter.com/@rayoalcantar
-Version: 1.5
-Autor: rayoscompani.
-Mail: rayoalcantar@gmail.com
-Sitio web: www.rayoscompani.260mb.net
-
 * Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o in private, en Edge.
 * Se añadieron los sitios web de Netflix y Spotify.
 
@@ -53,7 +44,7 @@ Sitio web: www.rayoscompani.260mb.net
 
 Twitter: [@rayoalcantar](https://twitter.com/rayoalcantar)
 
-Versión: 1.4
+Versión: 1.5
 
 Autor: rayoscompani.
 
