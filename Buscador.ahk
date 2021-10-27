@@ -5,7 +5,7 @@ soundBeep, 440, 250
 sleep, 100
 speak("Bienvenido al buscador automatizado. Pulsa control + alt + m para abrir el menú, control + shift + q para cerrar el programa, o control + shift  + h para leer la ayuda del mismo. ¡Que lo disfrutes!", 1)
 
-version = V1.4
+version = V1.5
 SetTimer, actualizar, 10800000
 ;organización de páginas por categoría.
 Menu, cat1, Add, Pornhub.com, buscar
@@ -26,7 +26,7 @@ menu, cat5, add, GitHub, buscar
 menu, cat5, add, Twitter, buscar
 menu, cat6, add, NVDA En español, buscar
 ;Creamos las categorías:
-Menu, menuname, Add, Plataformas, :cat1
+Menu, menuname, Add, Porno, :cat1
 Menu, menuname, Add, Multimedia, :cat2
 Menu, menuname, Add, Motores de búsqueda, :cat3
 Menu, menuname, Add, Tienda, :cat4
@@ -49,9 +49,9 @@ MsgBox, 16, Error, Por favor introduce un criterio de búsqueda.
 return
 }
 ;Lo siguiente sigue siendo cambios referentes a la organización, cada array tiene su categoría y en ella están los enlaces organizados.
-;plataformas
+;Porno.
 sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate"]
-;multimedia
+;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
 sitios3 := ["https://www.bing.com/search?q=" cadena "%&form=QBLH&sp=-1&pq=ho&sc=9-2&qs=n&sk=&cvid=9F7BDB2914EA4C7988124D49233601D0", "https://www.google.com/search?q=" cadena]

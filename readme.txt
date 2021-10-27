@@ -66,7 +66,7 @@ Ahora los sitios webs para adultos se abrirán en una pestaña de incógnito, o 
 Se añaideron los sitios web de netflix y spotify.
 
 Twitter: @rayoalcantar
-Version: 1.4
+Version: 1.5
 Autor: rayoscompani.
 Mail: rayoalcantar@gmail.com
 Sitio web: www.rayoscompani.260mb.net
