@@ -24,8 +24,8 @@ Menu, cat4, Add, Mercado Libre Argentina, buscar
 Menu, cat4, Add, Mercado libre méxico, buscar
 Menu, cat5, add, Facebook, buscar
 menu, cat5, add, Twitter, buscar
-menu, cat6, add, NVDA En español, buscar
 menu, cat6, add, GitHub, buscar
+menu, cat6, add, NVDA En español, buscar
 
 ;Creamos las categorías:
 Menu, menuname, Add, Porno, :cat1
@@ -52,7 +52,7 @@ return
 }
 ;Lo siguiente sigue siendo cambios referentes a la organización, cada array tiene su categoría y en ella están los enlaces organizados.
 ;Porno.
-sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xvideos.com/?k=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate"]
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate", "https://www.xvideos.com/?k=" cadena " -incognito -inprivate"]
 ;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
@@ -62,7 +62,7 @@ sitios4 := ["https://www.amazon.com/s?k=" cadena "&ref=nb_sb_noss_2", "https://w
 ;Redes
 sitios5 := ["https://www.facebook.com/search/top?q=%C3%" cadena, "https://twitter.com/search?q=" cadena "&src=typed_query"]
 ;Misc
-sitios6 := ["https://nvda.es/?s=" cadena, "https://github.com/search?q=" cadena]
+sitios6 := ["https://github.com/search?q=" cadena, "https://nvda.es/?s=" cadena]
 ;Lo siguiente es comprobar cada submenú para ir obteniendo la posición y selección correcta al momento de ejecutar la página.
 if A_ThisMenu = cat1
 {
