@@ -10,6 +10,7 @@ SetTimer, actualizar, 10800000
 ;organización de páginas por categoría.
 Menu, cat1, Add, Pornhub.com, buscar
 Menu, Cat1, add, xnxx.com, buscar
+Menu, Cat1, add, Xvideos.com, buscar
 menu, cat2, add, Netflix, buscar
 menu, cat2, add, SoundCloud, buscar
 menu, cat2, add, Spotify, buscar
@@ -51,7 +52,7 @@ return
 }
 ;Lo siguiente sigue siendo cambios referentes a la organización, cada array tiene su categoría y en ella están los enlaces organizados.
 ;Porno.
-sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate"]
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xvideos.com/?k=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate"]
 ;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
