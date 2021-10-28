@@ -66,7 +66,7 @@ sitios6 := ["https://github.com/search?q=" cadena, "https://nvda.es/?s=" cadena]
 ;Lo siguiente es comprobar cada submenú para ir obteniendo la posición y selección correcta al momento de ejecutar la página.
 if A_ThisMenu = cat1
 {
-run, % sitios1[ItemPos]
+run, www.google.com
 ;Abrir ventana en incógnito.
 Sleep 2000
 send, ^+n
