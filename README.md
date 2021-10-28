@@ -57,7 +57,7 @@ Cierra el programa.
 * Se añadieron los sitios web de netflix y spotify.
 
 
-Versión: 1.5
+Versión: 1.6
 Autor: rayoscompani.
 Mail: rayoalcantar@gmail.com
 Sitio web: www.rayoscompani.260mb.net

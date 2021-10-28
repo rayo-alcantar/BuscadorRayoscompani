@@ -5,7 +5,7 @@ soundBeep, 440, 250
 sleep, 100
 speak("Bienvenido al buscador automatizado. Pulsa control + alt + m para abrir el menú, control + shift + q para cerrar el programa, o control + shift  + h para leer la ayuda del mismo. ¡Que lo disfrutes!", 1)
 
-version = V1.5
+version = V1.6
 SetTimer, actualizar, 10800000
 ;organización de páginas por categoría.
 Menu, cat1, Add, Pornhub.com, buscar
