@@ -58,6 +58,7 @@ Búsqueda en netflix (necesitas tener sesión abierta en el navegador).
 Por el momento estos son los sitios web que tenemos disponibles, pero si quieres añadir uno, o enviar una sugerencia, puedes hacerlo a: rayoalcantar@gmail.com
 
 changges:
+Se cambió de lugar  github, se añadióun sitio, y se arreglaron bugs.
 Se organizaron los sitios  por categoría, gracias a Mateo Cedillo.
 Se añadieron 2 sitios más. 
 Tenemos actualizador, gracias a Gera Késsler.

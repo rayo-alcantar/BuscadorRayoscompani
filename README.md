@@ -46,6 +46,7 @@ Abre este documento.
 Cierra el programa.
 
 #Changes:
+* Se cambió de lugar  github, se añadióun sitio, y se arreglaron bugs.
 * Se organizaron los sitios  por categoría, gracias a Mateo Cedillo.
 * Se añadieron 2 sitios más.
 * Tenemos actualizador, gracias a Gera Késsler.
