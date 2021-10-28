@@ -52,7 +52,7 @@ return
 }
 ;Lo siguiente sigue siendo cambios referentes a la organización, cada array tiene su categoría y en ella están los enlaces organizados.
 ;Porno.
-sitios1 := ["https://es.pornhub.com/video/search?search=" cadena " -incognito -inprivate", "https://www.xnxx.com/search/" cadena " -incognito -inprivate", "https://www.xvideos.com/?k=" cadena " -incognito -inprivate"]
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena]
 ;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
@@ -67,6 +67,14 @@ sitios6 := ["https://github.com/search?q=" cadena, "https://nvda.es/?s=" cadena]
 if A_ThisMenu = cat1
 {
 run, % sitios1[ItemPos]
+;Abrir ventana en incógnito.
+Sleep 2000
+send, ^+n
+sleep 100
+Send, % sitios1[ItemPos]
+sleep 250
+send {enter}
+return
 }
 if A_ThisMenu = cat2
 {
