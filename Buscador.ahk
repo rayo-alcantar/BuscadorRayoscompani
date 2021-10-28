@@ -11,6 +11,7 @@ SetTimer, actualizar, 10800000
 Menu, cat1, Add, Pornhub.com, buscar
 Menu, Cat1, add, xnxx.com, buscar
 Menu, Cat1, add, Xvideos.com, buscar
+Menu,Cat1, add, morritastube.xxx, buscar
 menu, cat2, add, Netflix, buscar
 menu, cat2, add, SoundCloud, buscar
 menu, cat2, add, Spotify, buscar
@@ -50,9 +51,8 @@ if (cadena) = ""
 MsgBox, 16, Error, Por favor introduce un criterio de búsqueda.
 return
 }
-;Lo siguiente sigue siendo cambios referentes a la organización, cada array tiene su categoría y en ella están los enlaces organizados.
 ;Porno.
-sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena]
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena, "https://www.morritastube.xxx/?s=", cadena]
 ;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
