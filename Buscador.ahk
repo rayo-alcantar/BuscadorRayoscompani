@@ -109,6 +109,7 @@ sleep, 50
 SoundBeep, 1000, 200
 ExitApp
 
+
 actualizar:
 actualizador(version)
 return
