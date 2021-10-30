@@ -66,6 +66,17 @@ sitios6 := ["https://github.com/search?q=" cadena, "https://nvda.es/?s=" cadena]
 ;Lo siguiente es comprobar cada submenú para ir obteniendo la posición y selección correcta al momento de ejecutar la página.
 if A_ThisMenu = cat1
 {
+;gui para el menú de las opciones del incógnito
+gui, add, button, Gnormal, abrir en bentana normal,
+gui, add, button, Gprivate, abrir en bentana de incógnito, edge y chrome
+gui, add, button, Gfirefox, abrir incógnito, firefox,
+gui, show,, ¿Quiéres abrir en incógnito?
+return
+
+normal:
+run, % sitios1[ItemPos]
+return
+private:
 run, www.google.com
 ;Abrir ventana en incógnito.
 Sleep 2000
@@ -75,6 +86,17 @@ Send, % sitios1[ItemPos]
 sleep 250
 send {enter}
 return
+firefox:
+run, www.google.com
+;Abrir ventana en incógnito.
+Sleep 2000
+send, ^+p
+sleep 100
+Send, % sitios1[ItemPos]
+sleep 250
+send {enter}
+return
+
 }
 if A_ThisMenu = cat2
 {
