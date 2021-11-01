@@ -52,7 +52,7 @@ MsgBox, 16, Error, Por favor introduce un criterio de búsqueda.
 return
 }
 ;Porno.
-sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena, "https://www.morritastube.xxx/?s=", cadena]
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena, "https://www.morritastube.xxx/?s=" cadena]
 ;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
@@ -67,36 +67,40 @@ sitios6 := ["https://github.com/search?q=" cadena, "https://nvda.es/?s=" cadena]
 if A_ThisMenu = cat1
 {
 ;gui para el menú de las opciones del incógnito
-gui, add, button, Gnormal, abrir en bentana normal,
-gui, add, button, Gprivate, abrir en bentana de incógnito, edge y chrome
-gui, add, button, Gfirefox, abrir incógnito, firefox,
+Gui, Add, Text,, Selecciona una de las opciones siguientes:
+gui, add, button, Gnormal, abrir en ventana normal
+gui, add, button, Gprivate, abrir en incógnito (edge y chrome)
+gui, add, button, Gfirefox, abrir en incógnito (firefox)
 gui, show,, ¿Quiéres abrir en incógnito?
+;obtener el resultado final del sitio seleccionado y su búsqueda en una variable global ya que las siguientes funciones la van a requerir para funcionar y ejecutar corectamente la búsqueda deseada.
+global SelectedSite := sitios1[ItemPos]
 return
 
 normal:
-run, % sitios1[ItemPos]
+run, %SelectedSite%
 return
+
 private:
 run, www.google.com
 ;Abrir ventana en incógnito.
 Sleep 2000
 send, ^+n
 sleep 100
-Send, % sitios1[ItemPos]
+Send, %SelectedSite%
 sleep 250
 send {enter}
 return
+
 firefox:
 run, www.google.com
 ;Abrir ventana en incógnito.
 Sleep 2000
 send, ^+p
 sleep 100
-Send, % sitios1[ItemPos]
+Send, %SelectedSite%
 sleep 250
 send {enter}
 return
-
 }
 if A_ThisMenu = cat2
 {
