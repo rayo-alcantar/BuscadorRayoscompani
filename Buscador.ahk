@@ -6,14 +6,14 @@
 sprate("4")
 spvolume("85")
 soundBeep, 440, 250
-;if (InStr(A_language,"0a") = "3")
-;{
-;global Idioma := "es"
-;}
-;else
-;{
+if (InStr(A_language,"0a") = "3")
+{
+global Idioma := "es"
+}
+else
+{
 global idioma := "en"
-;}
+}
 speak(translate(idioma, "Bienvenido al buscador automatizado. Pulsa control + alt + m para abrir el menú, control + shift + q para cerrar el programa, o control + shift  + h para leer la ayuda del mismo. ¡Que lo disfrutes!"), 1)
 version = V1.7
 SetTimer, actualizar, 10800000
