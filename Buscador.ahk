@@ -21,7 +21,8 @@ SetTimer, actualizar, 10800000
 Menu, cat1, Add, Pornhub.com, buscar
 Menu, Cat1, add, xnxx.com, buscar
 Menu, Cat1, add, Xvideos.com, buscar
-Menu,Cat1, add, morritastube.xxx, buscar
+Menu, cat1, Add, morritastube.xx, buscar
+Menu, cat1, Add, SpankBang.com, buscar
 menu, cat2, add, Netflix, buscar
 menu, cat2, add, SoundCloud, buscar
 menu, cat2, add, Spotify, buscar
@@ -63,7 +64,7 @@ MsgBox, 16, % translate(idioma, "Error"), % translate(idioma, "Por favor introdu
 return
 }
 ;Porno.
-sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena, "https://www.morritastube.xxx/?s=" cadena]
+sitios1 := ["https://es.pornhub.com/video/search?search=" cadena, "https://www.xnxx.com/search/" cadena, "https://www.xvideos.com/?k=" cadena, "https://www.morritastube.xxx/?s=" cadena, "https://la.spankbang.com/s/" cadena "/"]
 ;multimedia.
 sitios2 := ["https://www.netflix.com/search?q=" cadena, "https://soundcloud.com/search?q=" cadena, "https://open.spotify.com/search/" cadena, "https://www.youtube.com/results?search_query=" cadena]
 ;Motores búsqueda
